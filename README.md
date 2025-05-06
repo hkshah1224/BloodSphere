@@ -25,3 +25,5 @@ EmailJS – To send automated email confirmations on blood requests and donation
 🎯 Objective
 To provide a digital solution that improves the visibility of blood stock, simplifies the donation/request process, and enhances communication between healthcare facilities and donors.
 
+![21image](https://github.com/user-attachments/assets/f674f809-5c3f-44cc-902d-833184d6e421)
+
