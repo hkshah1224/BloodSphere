@@ -27,3 +27,15 @@ To provide a digital solution that improves the visibility of blood stock, simpl
 
 ![21image](https://github.com/user-attachments/assets/f674f809-5c3f-44cc-902d-833184d6e421)
 
+![image](https://github.com/user-attachments/assets/c3241f3d-d333-4564-9917-ab1126bf119e)
+
+![image](https://github.com/user-attachments/assets/f54e3142-4504-4710-86de-70dd4e1e5d5d)
+
+![image](https://github.com/user-attachments/assets/8628839d-4b02-41c1-9b0c-180df6812993)
+
+![image](https://github.com/user-attachments/assets/8e8c32a3-c4fe-470f-be5e-fbbc64050766)
+
+![image](https://github.com/user-attachments/assets/555718bb-5c19-4f5b-90cd-22d3382f0b6b)
+
+
+
