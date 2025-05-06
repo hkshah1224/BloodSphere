@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Campaigns</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-hand-holding-medical"></i> Bloodsphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Campaigns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Campaigns Section -->
+    <div class="container mt-4">
+        <h2 class="text-center text-danger"><i class="fas fa-tint"></i> Upcoming Blood Donation Campaigns</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card campaign-card">
+                    <img src="https://image.free-apply.com/gallery/l/uni/gallery/lg/1035600623/aaead3df99e6354e5f23d84050d1ffb8f64dffa4.jpg?s=640" class="card-img-top" alt="Campaign">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> LDRP College Drive</h5>
+                        <p class="card-text"><i class="fas fa-calendar-alt"></i> 2 January 2025</p>
+                        <a href="register.html" class="btn btn-danger w-100"><i class="fas fa-hand-holding-medical"></i> Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card campaign-card">
+                    <img src="https://aecom.com/cn/wp-content/uploads/2015/10/City-Hospital-5-smaller-e1444250182574-800x530.jpg" class="card-img-top" alt="Campaign">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> City Hospital Drive</h5>
+                        <p class="card-text"><i class="fas fa-calendar-alt"></i> 10 January 2025</p>
+                        <a href="register.html" class="btn btn-danger w-100"><i class="fas fa-hand-holding-medical"></i> Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card campaign-card">
+                    <img src="https://th.bing.com/th/id/R.8f668378b0f0266e5b4b997c28701ae5?rik=s7y48QgRI1rd8w&riu=http%3a%2f%2fphotos.wikimapia.org%2fp%2f00%2f01%2f99%2f17%2f45_big.jpg&ehk=QpoM%2fOkgEsQOuCXCjs2dYY4jIVlb2ljBxKH5%2bAo0neI%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Campaign">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Community Center Drive</h5>
+                        <p class="card-text"><i class="fas fa-calendar-alt"></i> 20 January 2025</p>
+                        <a href="register.html" class="btn btn-danger w-100"><i class="fas fa-hand-holding-medical"></i> Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volunteer Registration -->
+<h2 class="text-center text-danger mt-5"><i class="fas fa-users"></i> Register as a Volunteer</h2>
+<div class="volunteer-section mt-3">
+    <form id="volunteerForm">
+        <div class="mb-3">
+            <label for="name" class="form-label"><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label"><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="mb-3">
+            <label for="campaign" class="form-label"><i class="fas fa-hand-holding-heart"></i> Select Campaign</label>
+            <select class="form-select" id="campaign" required>
+                <option value="">Choose a campaign...</option>
+                <option value="LDRP College">LDRP College Drive</option>
+                <option value="City Hospital">City Hospital Drive</option>
+                <option value="Community Center">Community Center Drive</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-danger w-100"><i class="fas fa-user-plus"></i> Register as Volunteer</button>
+    </form>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="successModalLabel"><i class="fas fa-check-circle"></i> Registration Successful</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Thank you for registering as a volunteer! We appreciate your support.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="redirectButton">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("volunteerForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show(); // Show the success modal
+        this.reset(); // Reset the form
+    });
+
+    document.getElementById("redirectButton").addEventListener("click", function() {
+        window.location.href = "index.html"; // Redirect to index.html when OK is clicked
+    });
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

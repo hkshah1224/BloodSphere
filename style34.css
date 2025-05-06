@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(135deg, #f2a7a6, #ff7f7f);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
+    max-width: 85%;
+    margin: 0 auto;
+}
+.form-control {
+    border-radius: 15px;
+    background-color: #fff0f0;
+}
+.form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #ff6f61;
+    animation: fadeInDown 1s ease-in-out;
+}
+.btn-submit {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-submit:hover {
+    background-color: #ff7f7f;
+    transform: scale(1.05);
+}
+.details-section {
+    margin-top: 50px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    text-align: center;
+}
+.details-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+.details-section i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ff6f61;
+}
+.icon-red { color: #ffeb3b; }
+.icon-blue { color: #03a9f4; }
+.icon-green { color: #8bc34a; }
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Overlay (blurs the background) */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+/* Success Message Box */
+#successMessageBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+    width: 400px;
+}
+
+#successMessageBox h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+#successMessageBox p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#okButton {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#okButton:hover {
+    background-color: #ff7f7f;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

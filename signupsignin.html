@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Bar with Indicator</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style21.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <div class="line">
+            <h1 class='lineUp'>Welcome to Bloodsphere</h1>
+          </div>
+        <section class="main">
+            <div class="form_wrapper">
+                <input type="radio" class="radio" name="radio" id="login"  />
+                <input type="radio" class="radio" name="radio" id="signup" checked />
+                <div class="tile">
+                    <h3 class="login" style="color: crimson; font-size: x-large;">Login Form</h3>
+                    <h3 class="signup" style="color: crimson;  font-size: x-large;">Signup Form</h3>
+                </div>
+    
+                <label class="tab login_tab" for="login">
+                    Login
+                </label>
+    
+                <label class="tab signup_tab" for="signup">
+                    Signup
+                </label>
+                <span class="shape"></span>
+                <div class="form_wrap">
+                    <div class="form_fild login_form" id="f1">
+                        <div class="input_group">
+                            <input type="email" class="input" placeholder="Email Address" />
+                        </div>
+                        <div class="input_group">
+                            <input type="password" class="input" placeholder="Password" />
+                        </div>
+    
+                        <a href="#forgot" class="forgot">Forgot password?</a>
+    
+                        <form action="index.html"><input type="submit" class="btn" value="Login" /></form>
+    
+                        <div class="not_mem">
+                            <label  for="signup">Don't have an account? <span style="font-size: medium;"> Signup now</span></label>
+                        </div>
+    
+                    </div>
+    
+                    <div class="form_fild signup_form">
+                        <div class="input_group">
+                            <input type="text" class="input" placeholder="Username" />
+                        </div>
+                        <div class="input_group">
+                            <input type="email" class="input" placeholder="Email" />
+                        </div>
+    
+                        <div class="input_group">
+                            <input type="password" class="input" placeholder="Password" />
+                        </div>
+    
+                        <input type="submit" class="btn" value="Signup" />
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <script src="script5.js"></script>
+    </body>
+</html>

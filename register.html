@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Campaign Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5365c, #ff6f61);
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+            margin: 50px auto;
+        }
+        .form-control {
+            border-radius: 15px;
+            background-color: #fff0f0;
+        }
+        .form-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #ffeb3b;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .btn-submit {
+            background-color: #ffeb3b;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #ffd700;
+            transform: scale(1.05);
+        }
+        .icon-box {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffeb3b;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="form-section">
+        <h2><i class="fa fa-users"></i> Join Our Blood Donation Campaign</h2>
+        <form id="campaignRegistrationForm">
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+                <label for="bloodGroup" class="form-label">Blood Group</label>
+                <select class="form-control" id="bloodGroup" required>
+                    <option value="" disabled selected>Select your blood group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="availability" class="form-label">Availability</label>
+                <select class="form-control" id="availability" required>
+                    <option value="" disabled selected>Select your available time</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-submit">Register Now</button>
+        </form>
+    </section>
+</div>
+
+<script>
+    document.getElementById("campaignRegistrationForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let isValid = true;
+        document.querySelectorAll(".error-message").forEach(el => el.remove());
+        document.querySelectorAll(".form-control").forEach(el => el.style.border = "1px solid #ced4da");
+
+        // Full Name Validation
+        const fullName = document.getElementById("fullName");
+        if (!/^[A-Za-z\s]{5,}$/.test(fullName.value.trim())) {
+            showError(fullName, "Enter a valid name (at least 5 letters)");
+            isValid = false;
+        }
+
+        // Email Validation
+        const email = document.getElementById("email");
+        if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email.value.trim())) {
+            showError(email, "Enter a valid email address");
+            isValid = false;
+        }
+
+        // Phone Number Validation
+        const phone = document.getElementById("phone");
+        if (!/^\d{10}$/.test(phone.value.trim())) {
+            showError(phone, "Enter a valid 10-digit phone number");
+            isValid = false;
+        }
+
+        // Blood Group Validation
+        const bloodGroup = document.getElementById("bloodGroup");
+        if (bloodGroup.value === "") {
+            showError(bloodGroup, "Please select your blood group");
+            isValid = false;
+        }
+
+        // Availability Validation
+        const availability = document.getElementById("availability");
+        if (availability.value === "") {
+            showError(availability, "Please select your availability time");
+            isValid = false;
+        }
+
+        // If all validations pass, show success message
+        if (isValid) {
+            showSuccessMessage();
+        }
+    });
+
+    // Function to display error message
+    function showError(inputElement, message) {
+        inputElement.style.border = "2px solid red";
+        const errorDiv = document.createElement("div");
+        errorDiv.className = "error-message";
+        errorDiv.style.color = "red";
+        errorDiv.style.fontSize = "0.9rem";
+        errorDiv.style.marginTop = "5px";
+        errorDiv.textContent = message;
+        inputElement.parentNode.appendChild(errorDiv);
+    }
+
+    function showSuccessMessage() {
+        const successMessage = document.createElement("div");
+        successMessage.innerHTML = `
+            <div class="position-fixed top-50 start-50 translate-middle bg-white text-dark p-5 rounded shadow-lg text-center" style="z-index: 1050;">
+                <h3 class="text-success"><i class="fa fa-check-circle"></i> Registration Successful!</h3>
+                <p>Thank you for joining the Blood Donation Campaign.</p>
+                <button class="btn btn-danger mt-3" onclick="window.location.href='index.html'">OK</button>
+            </div>
+        `;
+        document.body.appendChild(successMessage);
+    }
+</script>
+
+</body>
+</html>

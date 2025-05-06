@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation - Bloodsphere</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff3e6c, #ff758c);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+        .btn-donate {
+            background-color: #ffffff;
+            color: #ff3e6c;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-donate:hover {
+            background-color: #ffebee;
+            color: #d32f2f;
+            transform: scale(1.05);
+        }
+        .steps-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .steps-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .steps-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .steps-box i {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        .icon-1 { color: #ffeb3b; } /* Yellow */
+        .icon-2 { color: #03a9f4; } /* Blue */
+        .icon-3 { color: #8bc34a; } /* Green */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Bloodsphere</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="hospitals.html">Hospitals</a></li>
+                <li class="nav-item"><a class="nav-link" href="bloodbanks.html">Blood Banks</a></li>
+                <li class="nav-item"><a class="nav-link active" href="blood-donation.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Give the Gift of Life, Donate Blood</h1>
+    <p>A single pint can save three lives, a single gesture can create a million smiles.</p>
+    <a href="donation2.html" class="btn btn-donate">Donate Now</a>
+</section>
+
+<section class="container steps-section">
+    <h2 class="text-center mb-5">How to Donate Blood?</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="steps-box">
+                <i class="fas fa-user-check icon-1 mb-3" style="font-size: xx-large;"></i>
+                <h4>Step 1: Eligibility</h4>
+                <p>Ensure you meet the health and age requirements to donate blood.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="steps-box">
+                <i class="fas fa-tint icon-2 mb-3" style="font-size: xx-large;"></i>
+                <h4>Step 2: Donation</h4>
+                <p>Visit a nearby blood bank or donation camp and donate blood safely.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="steps-box">
+                <i class="fas fa-heartbeat icon-3 mb-3" style="font-size: xx-large;"></i>
+                <h4>Step 3: Recovery</h4>
+                <p>Stay hydrated and rest for a while to regain energy after donation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

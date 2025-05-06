@@ -1,0 +1,367 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff0f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  h1 {
+    color: #b30059;
+    margin-bottom: 2rem;
+  }
+  
+  canvas {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  #blood-buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .blood-btn {
+    background: #f06292;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: default;
+    transition: transform 0.2s;
+  }
+  
+  .blood-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .back-btn {
+    margin-top: 3rem;
+    padding: 0.6rem 1.2rem;
+    background: #880e4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .back-btn:hover {
+    background: #ad1457;
+  }
+  .request-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.request-section input {
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#request-blood-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#request-blood-btn:hover {
+    background-color: darkred;
+}
+
+.success-msg {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.blood-stock-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 10px;
+    width: 180px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.blood-stock-card:hover {
+    transform: translateY(-5px);
+}
+
+.blood-type-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.blood-meter-bg {
+    background-color: #eee;
+    height: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.blood-meter-fill {
+    height: 100%;
+    background-color: crimson;
+    transition: width 0.6s ease-in-out;
+}
+
+.stock-info {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.select-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-btn:hover {
+    background-color: #b02a37;
+}
+
+.success-msg, .error-msg {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.success-msg {
+    color: green;
+}
+
+.error-msg {
+    color: red;
+}
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlide {
+  0% {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Animate stock detail container */
+.animated-stock-container {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Animate blood group buttons */
+.animated-blood-group {
+  animation: fadeSlide 0.5s ease-in-out;
+}
+
+/* Slight scale on hover for interactivity */
+.blood-group-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.blood-stock-card.animate-entry {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.blood-meter-fill {
+  height: 20px;
+  background: linear-gradient(90deg, #ff4d4d, #ff1a1a);
+  transition: width 1s ease;
+  border-radius: 5px;
+}
+.ack-success {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e6ffed;
+  border-left: 6px solid #28a745;
+  color: #155724;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+  animation: fadeInScale 0.6s ease-out;
+  text-align: center;
+}
+
+.ack-success i {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInScale {
+  0% {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.ack-success {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e6ffed;
+  border-left: 6px solid #28a745;
+  color: #155724;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+  animation: fadeInScale 0.6s ease-out;
+  text-align: center;
+}
+
+.ack-success i {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInScale {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.toast-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  padding: 25px 40px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  z-index: 9999;
+  transition: all 0.4s ease;
+}
+
+.toast-success {
+  border-left: 8px solid #28a745;
+  color: #155724;
+}
+
+.toast-error {
+  border-left: 8px solid #dc3545;
+  color: #721c24;
+}
+
+.toast-overlay.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.donor-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+.donor-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 10px;
+  background: #fff9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.donor-card:hover {
+  transform: scale(1.03);
+}
+.call-btn {
+  color: #d9534f;
+  font-weight: bold;
+  text-decoration: none;
+}
+.call-btn:hover {
+  text-decoration: underline;
+  
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.highlight-focus {
+  animation: glow 2s ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+      box-shadow: 0 0 20px 4px rgba(255, 0, 0, 0.7);
+  }
+  100% {
+      box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.5);
+  }
+}

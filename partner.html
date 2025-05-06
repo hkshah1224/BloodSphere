@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner with us</title>
+    <style>
+            /* General Styling */
+            body {
+                font-family: 'Poppins', sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #222;
+                background-color: #f4f4f9;
+            }
+
+            /* Header Styling */
+            .header {
+                background: linear-gradient(90deg, #ff416c, #ff4b2b);
+                color: white;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .header h1 {
+                font-size: 2.8rem;
+                margin: 0;
+                font-weight: 700;
+            }
+
+            .header p {
+                margin: 10px 0 0;
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+
+            /* Container */
+            .container {
+                max-width: 1100px;
+                margin: 30px auto;
+                padding: 0 20px;
+            }
+
+            /* Section Header */
+            .section-header h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                text-align: center;
+                color: #ff416c;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            /* Benefits Section */
+            .partner-section {
+                background: #ffffff;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+                margin-top: 30px;
+                border-top: 5px solid #ff4b2b;
+            }
+
+            .partner-section h2 {
+                font-size: 2.5rem;
+                color: #ff416c;
+                text-align: center;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .partner-section p {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+                color: #444;
+            }
+
+            .benefits h3 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                color: #333;
+                font-weight: bold;
+                text-transform: capitalize;
+                border-left: 5px solid #ff4b2b;
+                padding-left: 10px;
+            }
+
+            .benefits ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .benefits ul li {
+                background: linear-gradient(90deg, #ffafbd, #ffc3a0);
+                margin: 10px 0;
+                padding: 15px 20px;
+                border-radius: 10px;
+                font-size: 1.1rem;
+                color: #222;
+                font-weight: 500;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .benefits ul li:hover {
+                transform: translateY(-3px);
+            }
+
+            /* Call-to-Action Form */
+            .cta-form h3 {
+                font-size: 1.8rem;
+                color: #333;
+                margin-bottom: 15px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .cta-form p {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+            .cta-form input,
+            .cta-form textarea {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 15px;
+                border: 2px solid #ff4b2b;
+                border-radius: 10px;
+                font-size: 1rem;
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .cta-form textarea {
+                height: 120px;
+                resize: none;
+            }
+
+            .cta-form input:focus,
+            .cta-form textarea:focus {
+                outline: none;
+                border-color: #ff416c;
+                box-shadow: 0 0 5px #ff416c;
+            }
+
+            .cta-form button {
+                background: linear-gradient(90deg, #ff416c, #ff4b2b);
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                border-radius: 10px;
+                font-weight: bold;
+                transition: 0.3s ease;
+            }
+
+            .cta-form button:hover {
+                background: linear-gradient(90deg, #ff4b2b, #ff416c);
+                transform: scale(1.05);
+            }
+
+            /* Testimonials */
+            .testimonial {
+                margin-top: 30px;
+                padding: 20px;
+                background: linear-gradient(90deg, #ffafbd, #ffc3a0);
+                border-radius: 15px;
+                text-align: center;
+                color: #333;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .testimonial h3 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+
+            .testimonial p {
+                font-style: italic;
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+            /* CTA Button */
+            .cta {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .cta a {
+                background: linear-gradient(90deg, #ff416c, #ff4b2b);
+                color: white;
+                text-decoration: none;
+                padding: 15px 30px;
+                font-size: 1.4rem;
+                border-radius: 10px;
+                font-weight: bold;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: 0.3s ease;
+            }
+
+            .cta a:hover {
+                background: linear-gradient(90deg, #ff4b2b, #ff416c);
+                transform: translateY(-3px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            }
+            /* Modal Styling */
+            #modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            #modal-content {
+                background: #ffffff;
+                padding: 30px 40px;
+                text-align: center;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                max-width: 400px;
+                width: 90%;
+            }
+
+            #modal-content h2 {
+                font-size: 1.8rem;
+                color: #ff416c;
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+
+            #modal-content p {
+                font-size: 1.2rem;
+                color: #444;
+                margin-bottom: 20px;
+            }
+
+            #done-btn {
+                background: linear-gradient(90deg, #ff416c, #ff4b2b);
+                color: #ffffff;
+                border: none;
+                padding: 12px 25px;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 8px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+
+            #done-btn:hover {
+                background: linear-gradient(90deg, #ff4b2b, #ff416c);
+                transform: scale(1.05);
+            }
+
+    </style>
+</head>
+<body>
+    <div class="partner-section">
+        <h2>Join Our Mission to Save Lives</h2>
+        <p>Collaborate with E-BloodServices Hub to streamline blood supply operations, reduce wastage, and make an impact in saving lives. Partner with us and unlock the power of technology to serve your community better.</p>
+        
+        <div class="benefits">
+            <h3>Why Partner With Us?</h3>
+            <ul>
+                <li><strong>Real-Time Insights:</strong> Manage blood inventory efficiently with live data and analytics.</li>
+                <li><strong>Wide Network:</strong> Connect with hospitals and donors through our platform.</li>
+                <li><strong>Emergency Support:</strong> Seamlessly coordinate emergency dispatches.</li>
+                <li><strong>Compliance Made Easy:</strong> Adhere to safety and regulatory standards effortlessly.</li>
+            </ul>
+        </div>
+    
+        <div class="cta-form">
+            <h3>Interested in Partnering With Us?</h3>
+            <p>Fill out the form below and our team will get in touch with you.</p>
+            <form action="index.html">
+                <input type="text" name="bloodbank_name" placeholder="Blood Bank Name" required>
+                <input type="text" name="contact_person" placeholder="Contact Person" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="location" placeholder="Location" required>
+                <textarea name="message" placeholder="Tell us about your blood bank or any specific requirements" required></textarea>
+                <button type="submit" class="cta-btn">Submit Request</button>
+            </form>
+        </div>
+    
+        <div class="testimonial">
+            <h3>What Our Partners Say</h3>
+            <p><em>"E-BloodServices Hub has transformed the way we manage our blood inventory. The platform's real-time updates and emergency coordination have been a lifesaver."</em> - John Doe, Director of ABC Blood Bank</p>
+        </div>
+    </div>
+<script>
+        // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const body = document.querySelector("body");
+
+    // Create the modal dynamically
+    const modal = document.createElement("div");
+    modal.id = "modal";
+    modal.style.display = "none"; // Initially hidden
+    modal.innerHTML = `
+        <div id="modal-content">
+            <h2>Thank You!</h2>
+            <p>Your request has been successfully submitted. Our team will get in touch with you shortly.</p>
+            <button id="done-btn">Done</button>
+        </div>
+    `;
+    body.appendChild(modal);
+
+    // Handle form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Show the modal
+        modal.style.display = "flex";
+    });
+
+    // Handle the Done button click
+    document.getElementById("done-btn").addEventListener("click", function () {
+        modal.style.display = "none"; // Hide the modal
+        form.submit(); // Submit the form to its destination
+    });
+});
+
+    </script>
+</body>
+</html>

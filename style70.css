@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url(https://image.shutterstock.com/image-vector/abstract-healthy-medical-background-technology-260nw-1302197926.jpg);
+    background-size: cover;
+}
+.h8
+{
+    align-content: center;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.location-button {
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.location-button:hover {
+    background-color: darkred;
+}
+.centers-list {
+    margin-top: 20px;
+}
+.center {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.center h3 {
+    margin: 0;
+    color: crimson;
+}
+.book-slot-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.book-slot-button:hover {
+    background-color: darkgreen;
+}

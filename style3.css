@@ -1,0 +1,570 @@
+/* body {
+    background: black;
+  } */
+
+  .navbar {
+    opacity: 0;
+    transform: translateY(-50px);
+    background: darkred;
+    padding: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 12px;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Glowing Hover Effect for Navbar Links */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px white;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Carousel Animation */
+.carousel {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Carousel Captions */
+.custom-caption {
+    position: absolute;
+    text-align: center;
+    color: black;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* First & Third Slide Captions */
+.carousel-item:nth-child(1) .custom-caption,
+.carousel-item:nth-child(3) .custom-caption {
+    top: 45%;
+    left: 70%;
+}
+
+/* Second Slide Caption */
+.carousel-item:nth-child(2) .custom-caption {
+    top: 58%;
+    left: 23%;
+}
+
+/* Button Glow Effect (Only on Hover) */
+.button {
+    background-color: #B20000;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: 0 0 40px #FF0000;
+    background-color: #FF0000;
+}
+
+  body {
+    background: #0d0d0d; /* Dark Background */
+    color: white;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #8b0000, #550000);
+}
+
+.features-section h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Feature Cards Container */
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    height: 230px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(255, 0, 0, 0.7);
+}
+
+/* Glowing Effect */
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 10%, transparent 80%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+    transform: rotate(30deg);
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.feature-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.6);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+body {
+    background: #0d0d0d; /* Dark Background */
+    color: white;
+}
+
+.testimonials-section {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #8b0000, #550000);
+    color: #fff;
+  }
+
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+  }
+
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+
+  .testimonial-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-author {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffcccc;
+  }
+
+  .testimonial-role {
+    font-size: 1rem;
+    color: #ccc;
+  }
+
+
+
+
+
+
+
+/* Feedback Section */
+.feedback-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #550000, #8b0000);
+}
+
+.feedback-section h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Feedback Form */
+.feedback-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.feedback-form button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #ff1a1a;
+}
+
+.statistics-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #550000, #8b0000);
+    text-align: center;
+}
+
+.statistics-section h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Statistic Counter */
+.statistic-counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffcccc;
+    margin: 10px 0;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Statistic Description */
+.statistic-description {
+    font-size: 1.25rem;
+    color: #ccc;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .statistic-item {
+        margin-bottom: 20px;
+    }
+}
+
+.contact-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #550000, #8b0000);
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem
+}
+
+.contact-form button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px;
+    }
+}
+.footer-section {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #FF4D4D, #8B0000);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-section h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #FFCC00;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #FFEB3B;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.social-icon {
+    padding: 10px;
+    height: fit-content;
+    width: 80px;
+    border-radius:50%;
+    background-color: #fff;
+    color: #333;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social-icon.twitter {
+    background-color: #00aced;
+    color: white;
+}
+
+.social-icon.instagram {
+    background-color: #e4405f;
+    color: white;
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.social-icon.youtube {
+    background-color: #ff0000;
+    color: white;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    background-color: #ff4d4d;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+}
+
+.text-center p {
+    font-size: large;
+    color: #e0e0e0;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links li {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .social-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Initially hide all sections */
+section {
+    opacity: 0;
+    transform: translateY(50px); /* Move sections down initially */
+    transition: all 0.8s ease-in-out;
+  }
+  
+  /* Fade-in effect */
+  .section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Slide-in effects */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .section-visible.slide-in-left {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .section-visible.slide-in-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
